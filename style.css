@@ -1,0 +1,181 @@
+body {
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+button {
+    border: 5px solid #000;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-position:center center;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-color: #FF9100;
+    margin:auto auto;
+}
+
+.start {
+    background-image: url("images/hauntedHouse.jpg");
+}
+
+.enterButton {
+    position: absolute;
+    left:57%;
+    top:80%;
+    background-attachment:fixed;
+}
+
+.stayButton {
+    position: absolute;
+    left:9%;
+    top:85%;
+}
+
+.lobby {
+    background-image: url("images/lobby.jpg");
+}
+
+.enterHall {
+    position: absolute;
+    left:43.5%;
+    top:65%;
+}
+
+.restart {
+    position: absolute;
+}
+
+.goBack {
+    position: absolute;
+    right: 1%;
+}
+
+.graveyard {
+    background-image: url("images/graveyard.jpg");
+}
+
+.escape {
+   position:absolute;
+   top:30%;
+   left:85%;
+    
+}
+
+.hallway {
+    background-image: url("images/hallway.jpg");
+}
+
+.enterDeath1{
+    position:absolute;
+    left:30%;
+    top:60%;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.death1{
+    background-image:url("images/figure1.jpg");
+    background-repeat:repeat;
+}
+
+.enterBasement {
+    position:absolute;
+    left:60%;
+    top:50%;
+    color: rgb(255, 255, 255);
+    background-color:black;
+}
+
+.basement {
+    background-image:url("images/basement.jpg");
+}
+
+.conWalk {
+    position:absolute;
+    left:40%;
+    top:70%;
+    color: rgb(255, 255, 255);
+    background-color:black;
+}
+
+.cat {
+    background-image:url("images/blackCat.jpg");
+    background-size:cover;
+}
+
+.followCat{
+    position:absolute;
+    left:70%;
+    top:50%;
+    color: rgb(255, 255, 255);
+    background-color:black;
+}
+
+.winOne {
+    background-image:url("images/blackCat2.jpg");
+
+}
+
+.ignoreCat {
+    position:absolute;
+    left:40%;
+    top:50%;
+    color: rgb(255, 255, 255);
+    background-color:black;
+}
+
+.death2 {
+    color: rgb(255, 255, 255);
+    background-color:black;
+}
+
+.enterBathroom {
+    position:absolute;
+    left:20%;
+    top:50%;
+    color: rgb(255, 255, 255);
+    background-color:black;
+}
+
+.bathroom {
+    background-image: url("images/bathroom.jpg");
+    background-size:cover;
+}
+
+.upstairs {
+    position: absolute;
+    left:27%;
+    top:38%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+}
+
+h1 span {
+    background-color: black;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bench {
+    background-image: url("images/spookybench.jpeg");
+}
+
+.benchButton {
+    position: absolute;
+    left:90%;
+    top:91%;
+}
+
+.takeKey {
+    position: absolute;
+    left:57%;
+    top:50%;
+}

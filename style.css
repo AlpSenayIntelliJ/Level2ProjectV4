@@ -164,6 +164,12 @@ h1 span {
     padding-right: 5px;
 }
 
+.container {
+    display: grid;
+    grid-template-rows: 100px 325px 100px;
+    grid-template-columns: 4fr;
+}
+
 .bench {
     background-image: url("images/spookybench.jpeg");
 }
@@ -178,4 +184,9 @@ h1 span {
     position: absolute;
     left:57%;
     top:50%;
+}
+
+.leave {
+    position: absolute;
+    left:95%;
 }

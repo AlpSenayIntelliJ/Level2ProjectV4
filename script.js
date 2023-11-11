@@ -1,22 +1,35 @@
 var items = [];
+var emptyItems = [];
 
 function addKey() {
-    items.push("key");
+    if (items.indexOf("key") == -1) {
+        items.push("key");
+    }
 }
 
+function removeAllItems() {
+    items = emptyItems;
+}
+
+// buttons
 var keyButton = document.getElementById("takeKey");
+var restartButton = document.getElementById("restartBtn");
 
 var keySentence = document.getElementById("benchHeading");
 
-var itemsSentence = document.getElementById("checkItems");
-
-function changeContent() {
-    keySentence.innerHTML = '<h1><span>You picked up a key!</span></h1>';
+function changeTextContent(text) {
+    keySentence.innerHTML = '<h1><span>' + text + '</span></h1>';
 }
 
 keyButton.addEventListener('click', () => {
-    changeContent();
-    console.log(items.length);;
+    changeTextContent("You picked up a key!");
+    addKey();
+    // for checking items (DELETE LATER)
+    console.log(items);
+});
+
+restartButton.addEventListener('click', () => {
+    removeAllItems();
 });
 
 function hasKey() {

@@ -14,6 +14,7 @@ function removeAllItems() {
 // buttons
 var keyButton = document.getElementById("takeKey");
 var restartButton = document.getElementById("restartBtn");
+var unlockButton = document.getElementById("unlock");
 
 var keySentence = document.getElementById("benchHeading");
 
@@ -40,3 +41,15 @@ function hasKey() {
     }
     return false;
 }
+
+function checkKey() {
+    var conditionMet = hasKey();
+    if (!conditionMet) {
+        unlockButton.disabled = true;
+    }
+}
+
+unlockButton.addEventListener('click', () => {
+    removeAllItems();
+});
+

@@ -5,6 +5,31 @@ body {
     background-size: 100% 100%;
 }
 
+.gallery {
+    background-color: black;
+}
+
+.grid-container {
+    display: grid;
+    gap: 1% 1%;
+    grid-template-columns: 50% 50%;
+    background-color:black;
+    padding: 1%;
+  }
+  
+  .grid-item {
+    background-color:orange;;
+    border: 1% solid rgba(0, 0, 0, 0.8);
+    padding: 1%;
+    text-align: center;
+  }
+
+  .galleryImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 button {
     border: 5px solid #000;
     border-radius: 10px;
@@ -40,8 +65,8 @@ button {
 
 .enterHall {
     position: absolute;
-    left:43.5%;
-    top:65%;
+    left:45%;
+    top:50%;
 }
 
 .restart {
@@ -93,10 +118,10 @@ button {
     background-image:url("images/basement.jpg");
 }
 
-.conWalk {
+.unlock {
     position:absolute;
     left:40%;
-    top:70%;
+    top:47%;
     color: rgb(255, 255, 255);
     background-color:black;
 }
@@ -147,7 +172,7 @@ button {
 
 .upstairs {
     position: absolute;
-    left:27%;
+    left:23%;
     top:38%;
 }
 
@@ -174,6 +199,10 @@ h1 span {
     background-image: url("images/spookybench.jpeg");
 }
 
+.jumpscare {
+    background-image: url("images/jumpscare.jpg");
+}
+
 .benchButton {
     position: absolute;
     left:90%;
@@ -189,4 +218,10 @@ h1 span {
 .leave {
     position: absolute;
     left:95%;
+}
+
+.jumpscareBtn {
+    position: absolute;
+    top: 52%;;
+    left: 13%;
 }

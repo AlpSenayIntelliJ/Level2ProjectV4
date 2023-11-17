@@ -33,16 +33,22 @@ var keyButton = document.getElementById("takeKey");
 var restartButton = document.getElementById("restartBtn");
 var enterBasementButton = document.getElementById("enterBasement");
 var unlockButton = document.getElementById("unlock");
+var hintButton = document.getElementById("hintBtn");
 
 var keySentence = document.getElementById("benchHeading");
+var confrontSentence = document.getElementById("confrontHeading");
 
-function changeTextContent(text) {
-    keySentence.innerHTML = '<h1><span>' + text + '</span></h1>';
+function changeTextContent(sentence, text) {
+    sentence.innerHTML = '<h1><span>' + text + '</span></h1>';
 }
 
 keyButton.addEventListener('click', () => {
-    changeTextContent("You picked up a key!");
+    changeTextContent(keySentence, "You picked up a key!");
     addKey();
+});
+
+hintButton.addEventListener('click', () => {
+    changeTextContent(confrontSentence, "It is two words. FIND IT AND BRING IT TO ME!");
 });
 
 restartButton.addEventListener('click', () => {

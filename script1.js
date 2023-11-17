@@ -1,3 +1,18 @@
+loadItemsFromSessionStorage();
+
+// Save items to sessionStorage
+function saveItemsToSessionStorage() {
+    sessionStorage.setItem('savedItems', JSON.stringify(items));
+}
+
+// Load items from sessionStorage
+function loadItemsFromSessionStorage() {
+    const savedItems = sessionStorage.getItem('savedItems');
+    if (savedItems) {
+        items = JSON.parse(savedItems);
+    }
+}
+
 var items = [];
 var emptyItems = [];
 
@@ -5,10 +20,12 @@ function addKey() {
     if (items.indexOf("key") === -1) {
         items.push("key");
     }
+    saveItemsToSessionStorage();
 }
 
 function removeAllItems() {
     items = emptyItems;
+    saveItemsToSessionStorage();
 }
 
 // buttons
@@ -26,8 +43,6 @@ function changeTextContent(text) {
 keyButton.addEventListener('click', () => {
     changeTextContent("You picked up a key!");
     addKey();
-    // for checking items (DELETE LATER)
-    console.log(items);
 });
 
 restartButton.addEventListener('click', () => {
@@ -48,3 +63,4 @@ unlockButton.addEventListener('click', () => {
 function hasKey() {
     return items.includes("key");
 }
+

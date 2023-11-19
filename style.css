@@ -168,12 +168,6 @@ button {
     background-size:cover;
 }
 
-.upstairs {
-    position: absolute;
-    left:23%;
-    top:38%;
-}
-
 h1 {
     text-align: center;
     color: white;
@@ -181,6 +175,14 @@ h1 {
 }
 
 h1 span {
+    background-color: black;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+label {
+    color: white;
     background-color: black;
     padding: 5px;
     padding-left: 5px;
@@ -224,8 +226,6 @@ h1 span {
     left: 13%;
 }
 
-.hint {
-    position: absolute;
-    top: 20%;;
-    left: 90%;
+form {
+    text-align: center;
 }

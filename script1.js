@@ -33,7 +33,7 @@ var keyButton = document.getElementById("takeKey");
 var restartButton = document.getElementById("restartBtn");
 var enterBasementButton = document.getElementById("enterBasement");
 var unlockButton = document.getElementById("unlock");
-var submitButton = document.getElementById("submit");
+var submitButton = document.getElementById("goButton");
 
 var keySentence = document.getElementById("benchHeading");
 
@@ -41,9 +41,7 @@ function changeTextContent(sentence, text) {
     sentence.innerHTML = '<h1><span>' + text + '</span></h1>';
 }
 
-function checkUserGuess(event) {
-    event.preventDefault(); // Prevents the default form submission behavior
-
+function checkUserGuess() {
     const userInput = document.getElementById('codeInput').value.trim(); // Get user input and trim whitespace
     const expectedCode = "Heaven's Night";
 
@@ -73,9 +71,7 @@ unlockButton.addEventListener('click', () => {
 });
 
 // Event listener for submit button click
-submitButton.addEventListener('click', function(event) {
-    checkUserGuess(event); // Pass the event to the checkUserGuess function
-});
+submitButton.addEventListener('click', checkUserGuess);
 
 function hasKey() {
     return items.includes("key");

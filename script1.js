@@ -72,7 +72,10 @@ unlockButton.addEventListener('click', () => {
     removeAllItems();
 });
 
-submitButton.addEventListener('click', checkUserGuess);
+// Event listener for submit button click
+submitButton.addEventListener('click', function(event) {
+    checkUserGuess(event); // Pass the event to the checkUserGuess function
+});
 
 function hasKey() {
     return items.includes("key");

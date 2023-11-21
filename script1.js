@@ -41,6 +41,17 @@ function changeTextContent(sentence, text) {
     sentence.innerHTML = '<h1><span>' + text + '</span></h1>';
 }
 
+function checkUserGuess(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    const userInput = document.getElementById('codeInput').value.trim(); // Get user input and trim whitespace
+    const expectedCode = "Heaven's Night";
+
+    if (userInput.toLowerCase() === expectedCode.toLowerCase()) {
+        window.location.href = "win2.html";
+    }
+}
+
 keyButton.addEventListener('click', () => {
     changeTextContent(keySentence, "You picked up a key!");
     addKey();
@@ -60,6 +71,8 @@ enterBasementButton.addEventListener('click', () => {
 unlockButton.addEventListener('click', () => {
     removeAllItems();
 });
+
+submitButton.addEventListener('click', checkUserGuess);
 
 function hasKey() {
     return items.includes("key");

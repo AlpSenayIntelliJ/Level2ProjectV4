@@ -229,3 +229,7 @@ label {
 form {
     text-align: center;
 }
+
+.winTwo {
+    background-image: url("images/hauntedhousewin.jpg");
+}

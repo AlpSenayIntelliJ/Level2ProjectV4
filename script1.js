@@ -16,6 +16,7 @@ var keyButton = document.getElementById("takeKey");
 var restartButton = document.getElementById("restartBtn");
 var enterBasementButton = document.getElementById("enterBasement");
 var unlockButton = document.getElementById("unlock");
+var submitButton = document.getElementById('goButton')
 
 var keySentence = document.getElementById("benchHeading");
 
@@ -23,48 +24,45 @@ function changeTextContent(sentence, text) {
     sentence.innerHTML = '<h1><span>' + text + '</span></h1>';
 }
 
-keyButton.addEventListener('click', () => {
+if (keyButton) keyButton.addEventListener('click', () => {
     changeTextContent(keySentence, "You picked up a key!");
     addKey();
 });
 
-restartButton.addEventListener('click', () => {
+if (restartButton) restartButton.addEventListener('click', () => {
     removeAllItems();
 });
 
-enterBasementButton.addEventListener('click', () => {
+if (enterBasementButton) enterBasementButton.addEventListener('click', () => {
     var conditionMet = hasKey();
     if (!conditionMet) {
         unlockButton.disabled = true;
     }
 });
 
-unlockButton.addEventListener('click', () => {
+if (unlockButton) unlockButton.addEventListener('click', () => {
     removeAllItems();
 });
 
 // Event listener for submit button click
-submitButton.addEventListener('click', checkUserGuess);
+if (submitButton) submitButton.addEventListener('click', checkUserGuess);
 
 function hasKey() {
     return items.includes("key");
 }
 
 function checkUserGuess(event) {
-    event.preventDefault(); // Prevent the form from submitting and reloading the page
-    const userInput = document.getElementById('codeInput').value.trim(); // Get user input and trim whitespace
+    event.preventDefault(); // Prevents the form from submitting and reloading the page
+    const userInput = document.getElementById('codeInput').value.trim(); // Gets the user input and trims whitespace
     const expectedCode = "Heaven's Night";
 
     if (userInput.toLowerCase() === expectedCode.toLowerCase()) {
-        window.location.href = "win2.html"; // Redirect to the new HTML page upon correct code entry
+        window.location.href = "win2.html"; // Redirects to the new HTML page upon correct code entry
     } else {
-        // Handle incorrect code input, show a message or perform any other action
-        // For example, display an alert:
-        alert("Incorrect code. Try again!");
+        // Handles incorrect input
+        alert("Incorrect code. Try harder!");
     }
 }
 
 // Event listener for submit button click
-document.getElementById('goButton').addEventListener('click', checkUserGuess);
-
-
+if (submitButton) submitButton.addEventListener('click', checkUserGuess);

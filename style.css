@@ -6,15 +6,40 @@
     h1 span {
         background-color: black;
     }
+
+    button {
+        color: rgb(0, 0, 0);
+        background-color: #FF9100;
+    }
 }
 
 @media (min-width: 200px) and (max-width: 700px) {
     h1 {
-        color: yellow;
+        color: black;
     }
 
     h1 span {
-        background-color: purple;
+        background-color: orange;
+    }
+
+    button {
+        color: white;
+        background-color: black;
+    }
+}
+
+@media (max-width: 200px) {
+    h1 {
+        color: navy;
+    }
+
+    h1 span {
+        background-color: yellow;
+    }
+
+    button {
+        color: navy;
+        background-color: yellow;
     }
 }
 
@@ -53,12 +78,10 @@ body {
 button {
     border: 5px solid #000;
     border-radius: 10px;
-    color: rgb(0, 0, 0);
     font-weight: bold;
     background-position:center center;
     background-attachment: fixed;
     background-repeat:no-repeat;
-    background-color: #FF9100;
     margin:auto auto;
 }
 
@@ -190,12 +213,10 @@ button {
 
 h1 {
     text-align: center;
-    color: white;
     font-size: 38px;
 }
 
 h1 span {
-    background-color: black;
     padding: 5px;
     padding-left: 5px;
     padding-right: 5px;

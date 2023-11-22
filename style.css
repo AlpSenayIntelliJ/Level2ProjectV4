@@ -1,3 +1,23 @@
+@media (min-width: 700px) {
+    h1 {
+        color: white;
+    }
+
+    h1 span {
+        background-color: black;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+    h1 {
+        color: yellow;
+    }
+
+    h1 span {
+        background-color: purple;
+    }
+}
+
 body {
     background-repeat:no-repeat;
     background-attachment: fixed;
